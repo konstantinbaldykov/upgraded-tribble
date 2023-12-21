@@ -1,0 +1,10 @@
+
+struct VideoSettingsReducer: VideoSettingsReducerProtocol {
+    
+    mutating func reduce(_ currentState: VideoSettings,
+                         _ action: VideoSettingsModification) -> VideoSettings {
+        case .changeBlendMode(let mode):
+            newText.blendMode = mode
+            
+        case .changeZPosition(let index):
+            newText.zPosition = index
